@@ -290,6 +290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 341801206}
   - component: {fileID: 341801205}
+  - component: {fileID: 341801207}
   m_Layer: 0
   m_Name: plazaPaz
   m_TagString: Untagged
@@ -360,6 +361,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &341801207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341801204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af2203e1339f7b41bea16244b444c8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  residuo:
+  - {fileID: 1978938510722501773, guid: affa7ce5ca2223f4bb2254269fe81151, type: 3}
+  - {fileID: 1843092081102162228, guid: 843a0aa2eb0917244974a52c243c6f4d, type: 3}
+  - {fileID: 4240396843582793450, guid: ba95f5b34d604f94e85ba830952bd4c9, type: 3}
+  spawnTime: 2
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

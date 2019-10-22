@@ -5,7 +5,7 @@ using UnityEngine;
 public class GenerarBasura : MonoBehaviour
 {
     public GameObject[] residuo;
-    public float spawnTime;
+    public float spawnTime = 1.0f;
     private Vector2 screenbounds;
     int i; 
     // Start is called before the first frame update
@@ -16,7 +16,8 @@ public class GenerarBasura : MonoBehaviour
     }
     private void SpawnBasura()
     {
-        i = Random.Range(0, 5);
+        i = Random.Range(0, 3); // arreglar al momento de añadir todas las basuras
+ 
         GameObject a = Instantiate(residuo[i]) as GameObject;
         a.transform.position = new Vector2(Random.Range(-screenbounds.x, screenbounds.x), Random.Range(-screenbounds.y, screenbounds.y));
     }
