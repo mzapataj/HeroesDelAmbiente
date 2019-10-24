@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2565432858116796793}
   - component: {fileID: 3050056714458138092}
   - component: {fileID: 8108278947389219502}
+  - component: {fileID: 7863797893387428749}
   m_Layer: 0
   m_Name: cubiertos
   m_TagString: Untagged
@@ -107,3 +108,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.95, y: 2.23}
   m_EdgeRadius: 0.3
+--- !u!114 &7863797893387428749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7623204799675353929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40f4b7985ef827b47bf7194f8e8a70ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -21,6 +21,7 @@ public class GenerarBasura : MonoBehaviour
         GameObject a = Instantiate(residuo[i]) as GameObject;
         a.transform.position = new Vector2(Random.Range(-screenbounds.x, screenbounds.x), Random.Range(-screenbounds.y, screenbounds.y));
     }
+ 
     // Update is called once per frame
     IEnumerator OleadaBasura()
     {

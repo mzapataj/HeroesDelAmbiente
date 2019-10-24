@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3784937570808356677}
   - component: {fileID: 8594565689040486070}
   - component: {fileID: 5541055098041647982}
+  - component: {fileID: 7372568585047208096}
+  - component: {fileID: 5149553134579903749}
   m_Layer: 0
   m_Name: pilaNegra
   m_TagString: Untagged
@@ -107,3 +109,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.84, y: 3.33}
   m_EdgeRadius: 0.3
+--- !u!114 &7372568585047208096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3144121823945880679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ff864eaa17a1841b9ffd3bedc99e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5149553134579903749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3144121823945880679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af07d4a07c039254496ba5be977045a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 668769259003864298}
   - component: {fileID: 100774945818122486}
   - component: {fileID: 5322826099491459271}
+  - component: {fileID: 4479901602059575674}
   m_Layer: 0
   m_Name: botellaVerde
   m_TagString: Untagged
@@ -107,3 +108,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.76, y: 10.8}
   m_EdgeRadius: 0.3
+--- !u!114 &4479901602059575674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843092081102162228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af07d4a07c039254496ba5be977045a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3810808465358384622}
   - component: {fileID: 8735867448227203876}
   - component: {fileID: 8721269464045747468}
+  - component: {fileID: 8300655645732175048}
   m_Layer: 0
   m_Name: pilaNaranja
   m_TagString: Untagged
@@ -107,3 +108,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.84, y: 3.33}
   m_EdgeRadius: 0.3
+--- !u!114 &8300655645732175048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2536023030022859712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8ff864eaa17a1841b9ffd3bedc99e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
