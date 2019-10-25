@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bombillas : ObjectoController
+public class Plastico : ObjectoController
 {
 
     protected void Awake()
     {
-        type = "bombilla";
-        Debug.Log(type);
+        type = "plastico";
     }
     /*
     // Start is called before the first frame update

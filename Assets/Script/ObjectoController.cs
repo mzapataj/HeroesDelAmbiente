@@ -9,8 +9,8 @@ public class ObjectoController : MonoBehaviour
 
     private float startPosX;
     private float startPosY;
-    protected string type;
-    private bool isBeingHold = false;
+    public string type;
+    public bool isBeingHold = false;
 
 
     // Start is called before the first frame update
@@ -66,4 +66,6 @@ public class ObjectoController : MonoBehaviour
 
         return mousePos;
     }
+    
+
 }

@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Papel : ObjectoController
+public class Ordinarios : ObjectoController
 {
-
     protected void Awake()
     {
-        type = "papel";
-        Debug.Log(type);
-    }
+        type = "ordinario";
+     }
     /*
     // Start is called before the first frame update
     void Start()
