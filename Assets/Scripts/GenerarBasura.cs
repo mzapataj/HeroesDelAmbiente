@@ -7,7 +7,10 @@ public class GenerarBasura : MonoBehaviour
     public GameObject[] residuo;
     public float spawnTime = 1.0f;
     private Vector2 screenbounds;
-    int i; 
+    int i;
+    public const float bottom_threshold = 2f;
+    public const float top_threshold = 1f;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +22,10 @@ public class GenerarBasura : MonoBehaviour
         i = Random.Range(0, 3); // arreglar al momento de añadir todas las basuras
  
         GameObject a = Instantiate(residuo[i]) as GameObject;
-        a.transform.position = new Vector2(Random.Range(-screenbounds.x, screenbounds.x), Random.Range(-screenbounds.y, screenbounds.y));
+         
+        a.transform.position = new Vector2(Random.Range(-screenbounds.x, screenbounds.x),
+            Random.Range(-bottom_threshold, top_threshold));
+
     }
  
     // Update is called once per frame
