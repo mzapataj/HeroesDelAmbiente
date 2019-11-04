@@ -17,7 +17,6 @@ public class ObjectoController : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("Start object");
     }
 
 
@@ -35,8 +34,7 @@ public class ObjectoController : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log("Mouse down");
-
+     
         if (Input.GetMouseButtonDown(0))
         {
 

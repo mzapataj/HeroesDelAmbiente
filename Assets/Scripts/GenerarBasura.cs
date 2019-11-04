@@ -17,9 +17,10 @@ public class GenerarBasura : MonoBehaviour
         screenbounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         StartCoroutine(OleadaBasura());
     }
+
     private void SpawnBasura()
     {
-        i = Random.Range(0, 3); // arreglar al momento de añadir todas las basuras
+        i = Random.Range(0, 11); // Todas las basuras añadidas
  
         GameObject a = Instantiate(residuo[i]) as GameObject;
          

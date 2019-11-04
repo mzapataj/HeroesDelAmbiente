@@ -12,7 +12,7 @@ public class Caneca : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("Caneca creada.");
+
     }
 
     // Update is called once per frame
@@ -21,14 +21,19 @@ public class Caneca : MonoBehaviour
         
     }
 
+    /*Se activa al momento de detectar una colisión con otro gameObject con collider
+     * 
+     * */
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Caneca colisionada");
+        //obtiene el desecho que colisionó con la caneca
         desecho = collision.gameObject.GetComponent<ObjectoController>();
-        Debug.Log("Tipo de desecho: "+desecho.type.ToString());
+        
 
     }
-    
+
+    /*Se activa cuando un gameObject con collider permanece en el area de colisión de la caneca
+     * */
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (desecho != null && desecho.isBeingHold == false)
@@ -47,6 +52,5 @@ public class Caneca : MonoBehaviour
         
     }
     
-
 
 }

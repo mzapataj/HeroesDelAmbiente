@@ -568,7 +568,15 @@ MonoBehaviour:
   residuo:
   - {fileID: 1978938510722501773, guid: affa7ce5ca2223f4bb2254269fe81151, type: 3}
   - {fileID: 1843092081102162228, guid: 843a0aa2eb0917244974a52c243c6f4d, type: 3}
+  - {fileID: 759250602760620823, guid: 3d588b50ba7d17e44ad5f68a9cbc540a, type: 3}
+  - {fileID: 4824770833581857610, guid: 4114d8ed3012ba447a1e5ef1e845bb79, type: 3}
+  - {fileID: 7623204799675353929, guid: 18a3c217186f19a41b289875ea48f260, type: 3}
+  - {fileID: 391253084707197751, guid: 5a4f7d8ea754ad740a6b7bf67cd35d02, type: 3}
+  - {fileID: 6144456236042340579, guid: 63ce341fee3eb1a4ab495b4bb029643d, type: 3}
   - {fileID: 4240396843582793450, guid: ba95f5b34d604f94e85ba830952bd4c9, type: 3}
+  - {fileID: 8919442756934335155, guid: 2496ccbccac4d384a8416728966e3b38, type: 3}
+  - {fileID: 2536023030022859712, guid: 59ccdeed25170bf46a87319942f757a7, type: 3}
+  - {fileID: 3144121823945880679, guid: 72e424b3dbf57cc4d9535b2aa4b40fb1, type: 3}
   spawnTime: 2
 --- !u!1 &519420028
 GameObject:
@@ -748,7 +756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2c581a2323bbeb42acc356d5d56a321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: ordinario
+  type: peligroso
 --- !u!50 &556468299
 Rigidbody2D:
   serializedVersion: 4
@@ -1034,7 +1042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2c581a2323bbeb42acc356d5d56a321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: ordinario
+  type: pila
 --- !u!50 &937130764
 Rigidbody2D:
   serializedVersion: 4
