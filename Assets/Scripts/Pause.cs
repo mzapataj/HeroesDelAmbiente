@@ -9,6 +9,11 @@ public class Pause : MonoBehaviour
     {
         //pausePanel.SetActive(false);
     }
+
+    public Pause()
+    {
+
+    }
     /*
     void Update()
     {
@@ -28,6 +33,7 @@ public class Pause : MonoBehaviour
     public void PauseGame()
     {
         Time.timeScale = 0;
+        
         //pausePanel.SetActive(true);
         //Disable scripts that still work while timescale is set to 0
     }
