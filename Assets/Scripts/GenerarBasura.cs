@@ -17,7 +17,7 @@ public class GenerarBasura : MonoBehaviour
     void Start()
     {
         
-       // mondy = new MondyPlazaPaz(5, GameObject.Find("Vida").GetComponent<Text>());
+        mondy = new MondyPlazaPaz(5, GameObject.Find("Vida").GetComponent<Text>());
         screenbounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         StartCoroutine(OleadaBasura());
     }
