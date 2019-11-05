@@ -6,7 +6,6 @@ using UnityEngine;
 public class ObjectoController : MonoBehaviour
 {
 
-
     private float startPosX;
     private float startPosY;
     public string type;

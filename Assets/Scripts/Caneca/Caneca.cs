@@ -6,13 +6,13 @@ public class Caneca : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    
     private ObjectoController desecho = null;
     public string type = "ordinario"; 
 
 
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -44,7 +44,9 @@ public class Caneca : MonoBehaviour
             }
             else
             {
-                Debug.Log("Incorrecto."); 
+                Debug.Log("Incorrecto.");
+                GenerarBasura.mondy.perderVida();
+                
             }
             Destroy(desecho.gameObject);
             desecho = null;

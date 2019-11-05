@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Ordinarios : ObjectoController
 {
+    
     protected void Awake()
     {
         type = "ordinario";
