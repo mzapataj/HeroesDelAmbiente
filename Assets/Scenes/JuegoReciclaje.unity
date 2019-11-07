@@ -292,7 +292,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d7a1aa1cc2b3240a8552a438e54b0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pause: {fileID: 0}
 --- !u!4 &143051038
 Transform:
   m_ObjectHideFlags: 0
@@ -1169,8 +1168,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -74.99997}
-  m_SizeDelta: {x: 200, y: 150}
+  m_AnchoredPosition: {x: 70, y: -74.99997}
+  m_SizeDelta: {x: 160, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &981255087
 MonoBehaviour:
@@ -1504,7 +1503,6 @@ GameObject:
   - component: {fileID: 1560920542}
   - component: {fileID: 1560920545}
   - component: {fileID: 1560920544}
-  - component: {fileID: 1560920543}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1531,18 +1529,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1560920543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1560920541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e74ba76f40de28248ba5670b7e8cfc66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1560920544
 MonoBehaviour:
   m_ObjectHideFlags: 0

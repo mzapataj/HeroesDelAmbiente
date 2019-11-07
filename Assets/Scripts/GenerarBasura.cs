@@ -7,20 +7,31 @@ public class GenerarBasura : MonoBehaviour
 {
 
     public static MondyPlazaPaz mondy;
+    public Tiempo tiempo;   
     public GameObject[] residuo;
-    public float spawnTime = 1.0f;
     private Vector2 screenbounds;
+
+    public float spawnTime = 1.0f;
     int i;
-    public const float bottom_threshold = 2f;
-    public const float top_threshold = 1f;    
+    public const float TOP_THRESHOLD = 1f, BOTTOM_THRESHOLD = 2f;
+    
     // Start is called before the first frame update
+
     void Start()
     {
         
         mondy = new MondyPlazaPaz(5, GameObject.Find("Vida").GetComponent<Text>());
+        tiempo = new Tiempo(GameObject.Find("Tiempo").GetComponent<Text>());    
         screenbounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         StartCoroutine(OleadaBasura());
     }
+
+    void Update()
+    {
+        tiempo.updateTime();
+
+    }
+
 
     private void SpawnBasura()
     {
@@ -29,7 +40,7 @@ public class GenerarBasura : MonoBehaviour
         GameObject a = Instantiate(residuo[i]) as GameObject;
          
         a.transform.position = new Vector2(Random.Range(-screenbounds.x, screenbounds.x),
-            Random.Range(-bottom_threshold, top_threshold));
+            Random.Range(-BOTTOM_THRESHOLD, TOP_THRESHOLD));
 
     }
  

@@ -40,7 +40,10 @@ public class Caneca : MonoBehaviour
         {
             if (desecho.type.Equals(type))
             {
+
                 Debug.Log("¡Correcto!.");
+                GenerarBasura.mondy.addBasura(type);
+
             }
             else
             {

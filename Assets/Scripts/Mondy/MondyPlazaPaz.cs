@@ -11,6 +11,32 @@ public class MondyPlazaPaz : Mondy
     public MondyPlazaPaz(int vida, Text vida_text) : base(vida, vida_text)
     {
         Desechos_depositados = new Dictionary<string, int>();
+       
     }
 
+    public override void perderVida()
+    {
+            vida -= 1;
+            vida_text.text = "Vida x " + vida;
+
+            if (vida <= 0)
+            {
+                Debug.Log("Juego terminado");
+                GameObject.Find("Panel").GetComponent<Pause>().PauseGame();
+            }
+
+    }
+
+
+    public void addBasura(string type)
+    {
+        Desechos_depositados.Add(type,Desechos_depositados[type]++);
+    }
+    public override void setScore()
+    {
+        throw new System.NotImplementedException();
+
+       
+        
+    }
 }

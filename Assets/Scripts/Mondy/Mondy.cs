@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Mondy
+public abstract class Mondy
 {
 
     public int vida;
@@ -15,19 +15,8 @@ public class Mondy
         this.vida = vida;
         this.vida_text = vida_text;
     }
-    
-    public void perderVida()
-    {
-       
-        vida -= 1;
-        vida_text.text = "Vida x " + vida;
-        
-        if (vida <= 0)
-        {
-            Debug.Log("Juego terminado");
-            GameObject.Find("Panel").GetComponent<Pause>().PauseGame();
-        }
 
-    }
+    public abstract void perderVida();
+    public abstract void setScore();
     
 }
