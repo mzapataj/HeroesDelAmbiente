@@ -30,13 +30,20 @@ public class MondyPlazaPaz : Mondy
 
     public void addBasura(string type)
     {
-        Desechos_depositados.Add(type,Desechos_depositados[type]++);
+        try
+        {
+            Desechos_depositados[type] = Desechos_depositados[type] + 1;
+        }
+        catch (KeyNotFoundException error)
+        {
+            Desechos_depositados.Add(type, 1);
+        }
+        
     }
+
     public override void setScore()
     {
-        throw new System.NotImplementedException();
-
-       
+        throw new System.NotImplementedException();  
         
     }
 }

@@ -43,7 +43,7 @@ public class Caneca : MonoBehaviour
 
                 Debug.Log("¡Correcto!.");
                 GenerarBasura.mondy.addBasura(type);
-
+                Debug.Log(GenerarBasura.mondy.Desechos_depositados[type]);
             }
             else
             {

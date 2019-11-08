@@ -10,12 +10,19 @@ public class ObjectoController : MonoBehaviour
     private float startPosY;
     public string type;
     public bool isBeingHold = false;
+    private float lifetime = 10f;
 
+
+
+    void Awake()
+    {
+    }
 
     // Start is called before the first frame update
 
     void Start()
     {
+        Destroy(gameObject, lifetime);
     }
 
 
