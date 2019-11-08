@@ -34,7 +34,7 @@ public class MondyPlazaPaz : Mondy
         {
             Desechos_depositados[type] = Desechos_depositados[type] + 1;
         }
-        catch (KeyNotFoundException error)
+        catch (KeyNotFoundException)
         {
             Desechos_depositados.Add(type, 1);
         }

@@ -11,7 +11,7 @@ public class ObjectoController : MonoBehaviour
     public string type;
     public bool isBeingHold = false;
     private float lifetime = 10f;
-
+    public int creation_time;
 
 
     void Awake()
@@ -23,6 +23,7 @@ public class ObjectoController : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, lifetime);
+        creation_time = DateTime.Now.Second;
     }
 
 

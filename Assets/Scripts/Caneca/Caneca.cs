@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -40,7 +41,7 @@ public class Caneca : MonoBehaviour
         {
             if (desecho.type.Equals(type))
             {
-
+                GenerarBasura.puntaje.addValor(DateTime.Now.Second - desecho.creation_time);
                 Debug.Log("¡Correcto!.");
                 GenerarBasura.mondy.addBasura(type);
                 Debug.Log(GenerarBasura.mondy.Desechos_depositados[type]);

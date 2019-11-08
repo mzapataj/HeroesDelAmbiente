@@ -1272,6 +1272,7 @@ GameObject:
   - component: {fileID: 1027724807}
   - component: {fileID: 1027724809}
   - component: {fileID: 1027724808}
+  - component: {fileID: 1027724810}
   m_Layer: 5
   m_Name: Puntaje
   m_TagString: Untagged
@@ -1295,8 +1296,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -250, y: -70}
-  m_SizeDelta: {x: 110, y: 40}
+  m_AnchoredPosition: {x: -240, y: -70}
+  m_SizeDelta: {x: 264.1, y: 105.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1027724808
 MonoBehaviour:
@@ -1338,6 +1339,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1027724806}
   m_CullTransparentMesh: 0
+--- !u!114 &1027724810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027724806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9599b6586ac8b954186a5ac5bfbf99e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1278555050
 GameObject:
   m_ObjectHideFlags: 0
@@ -1426,6 +1439,7 @@ GameObject:
   - component: {fileID: 1288173773}
   - component: {fileID: 1288173775}
   - component: {fileID: 1288173774}
+  - component: {fileID: 1288173776}
   m_Layer: 5
   m_Name: Tiempo
   m_TagString: Untagged
@@ -1492,6 +1506,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1288173772}
   m_CullTransparentMesh: 0
+--- !u!114 &1288173776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288173772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4815fbb452af563419209772751c873e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1560920541
 GameObject:
   m_ObjectHideFlags: 0

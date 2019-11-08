@@ -5,18 +5,27 @@ using System.Timers;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Tiempo
+public class Tiempo : MonoBehaviour
 {
     Text timer_text;
-    float timer;
-    int  m, s;
-
+    private float timer;
+    public int  m, s;
+    /*
     public Tiempo(Text timer_text)
     {
         this.timer_text = timer_text;
-        /*timer = new System.Timers.Timer();
+        timer = new System.Timers.Timer();
         timer.Interval = 1000;
-        timer.Elapsed += OnTimeEvent;*/
+        timer.Elapsed += OnTimeEvent;
+    }*/
+    public void Start()
+    {
+        timer_text = gameObject.GetComponent<Text>();
+    }
+
+    public void Update()
+    {
+        updateTime();
     }
 
     public void updateTime()

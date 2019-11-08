@@ -8,7 +8,7 @@ public abstract class Mondy
 
     public int vida;
     public long puntaje = 0;
-    public int tiempo;
+    //public int tiempo;
     public Text vida_text; 
 
     public Mondy(int vida, Text vida_text){

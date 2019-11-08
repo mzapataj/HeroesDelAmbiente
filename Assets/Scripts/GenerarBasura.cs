@@ -7,9 +7,11 @@ public class GenerarBasura : MonoBehaviour
 {
 
     public static MondyPlazaPaz mondy;
-    public Tiempo tiempo;   
+    public static Puntaje puntaje;
     public GameObject[] residuo;
     private Vector2 screenbounds;
+    
+
 
     public float spawnTime = 1.0f;
     int i;
@@ -21,15 +23,14 @@ public class GenerarBasura : MonoBehaviour
     {
         
         mondy = new MondyPlazaPaz(5, GameObject.Find("Vida").GetComponent<Text>());
-        tiempo = new Tiempo(GameObject.Find("Tiempo").GetComponent<Text>());    
+        puntaje = GameObject.Find("Puntaje").GetComponent<Puntaje>();
         screenbounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         StartCoroutine(OleadaBasura());
     }
 
     void Update()
     {
-        tiempo.updateTime();
-
+    
     }
 
 
@@ -44,7 +45,7 @@ public class GenerarBasura : MonoBehaviour
 
     }
  
-    // Update is called once per frame
+    
     IEnumerator OleadaBasura()
     {
         while (true)
