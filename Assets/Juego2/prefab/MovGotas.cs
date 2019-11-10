@@ -20,7 +20,7 @@ public class MovGotas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y < screenBounds.y)
+        if (transform.position.y > screenBounds.y)
         {
             Destroy(this.gameObject);
         }

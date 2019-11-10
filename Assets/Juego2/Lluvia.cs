@@ -19,7 +19,7 @@ public class Lluvia : MonoBehaviour
     {
         i = Random.Range(0, 10);
         GameObject a = Instantiate(Gota[i]) as GameObject;
-        a.transform.position = new Vector2(Random.Range(-screenbounds.x, screenbounds.x), screenbounds.y * -2);
+        a.transform.position = new Vector2(Random.Range(-screenbounds.x, screenbounds.x), screenbounds.y);
     }
     IEnumerator goteo()
     {
