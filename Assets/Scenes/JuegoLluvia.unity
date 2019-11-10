@@ -307,4 +307,4 @@ MonoBehaviour:
   - {fileID: 689073969230396257, guid: df8f3900e0d79ad49bba8c15c1518bbe, type: 3}
   - {fileID: 689073969230396257, guid: df8f3900e0d79ad49bba8c15c1518bbe, type: 3}
   - {fileID: 689073969230396257, guid: df8f3900e0d79ad49bba8c15c1518bbe, type: 3}
-  respawnTime: 1
+  respawnTime: 3
