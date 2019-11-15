@@ -18,5 +18,6 @@ public abstract class Mondy
 
     public abstract void perderVida();
     public abstract void setScore();
-    
+    public abstract void morir();
+
 }

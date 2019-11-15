@@ -21,12 +21,21 @@ public class MondyPlazaPaz : Mondy
 
             if (vida <= 0)
             {
-                Debug.Log("Juego terminado");
-                GameObject.Find("Panel").GetComponent<Pause>().PauseGame();
+                morir();    
             }
 
     }
 
+    public override void morir()
+    {
+            Debug.Log("Juego terminado");
+            GameObject.Find("Panel").GetComponent<Pause>().PauseGame();
+
+            //Dictionary<string, string> jsonBody = new Dictionary<string, string>();
+            
+            //HandlerSessionPlayer.httpManager.postMethod(,
+            //    "users/"+HandlerSessionPlayer.currentUser_json["id"]+"/scores");
+    }
 
     public void addBasura(string type)
     {
@@ -40,6 +49,7 @@ public class MondyPlazaPaz : Mondy
         }
         
     }
+ 
 
     public override void setScore()
     {

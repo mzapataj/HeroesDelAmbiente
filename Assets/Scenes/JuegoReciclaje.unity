@@ -620,6 +620,9 @@ MonoBehaviour:
   - {fileID: 8919442756934335155, guid: 2496ccbccac4d384a8416728966e3b38, type: 3}
   - {fileID: 2536023030022859712, guid: 59ccdeed25170bf46a87319942f757a7, type: 3}
   - {fileID: 3144121823945880679, guid: 72e424b3dbf57cc4d9535b2aa4b40fb1, type: 3}
+  - {fileID: 2501442039097288838, guid: 2f0fcf23e155fe74995c8dc19bb91baa, type: 3}
+  - {fileID: 1335804303766441484, guid: 6f79200d6d72d8340936551a98206ac6, type: 3}
+  - {fileID: 4189639929814766172, guid: 1eb2147c0d2fb5242b5c50c55f19bc21, type: 3}
   spawnTime: 2
 --- !u!1 &519420028
 GameObject:
@@ -1518,6 +1521,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4815fbb452af563419209772751c873e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m: 0
+  s: 0
 --- !u!1 &1560920541
 GameObject:
   m_ObjectHideFlags: 0

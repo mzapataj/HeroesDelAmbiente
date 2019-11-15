@@ -17,8 +17,8 @@ public class ComandosBasicos : MonoBehaviour
 
         HandlerSessionPlayer handlerSessionPlayer = new HandlerSessionPlayer();
 
-       
-
+        handlerSessionPlayer.popUpMenu.SetActive(true);
+        /*
         if (handlerSessionPlayer.NameUser.Equals(""))
         {
             handlerSessionPlayer.popUpMenu.SetActive(true);
@@ -27,6 +27,6 @@ public class ComandosBasicos : MonoBehaviour
         {
             SceneManager.LoadSceneAsync("Games");
         }
-
+        */
     }
 }
