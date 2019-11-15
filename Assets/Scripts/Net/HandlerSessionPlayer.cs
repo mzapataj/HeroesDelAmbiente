@@ -10,20 +10,22 @@ public class HandlerSessionPlayer
     public GameObject popUpMenu;
     public static HTTPManager httpManager;
     public static Dictionary<string, dynamic> currentUser_json;
-    private string nameUser;
+    private string userSession;
 
-    public string NameUser
+    public string UserSession
     {
-            get { return PlayerPrefs.GetString("username",""); }
-            set { PlayerPrefs.SetString("username", value); }
+            get { return PlayerPrefs.GetString("userSession", ""); }
+            set { PlayerPrefs.SetString("userSession", value); }
     }
 
     public HandlerSessionPlayer()
     {
         httpManager = new HTTPManager("https://quilla-cuidado-ambiental.herokuapp.com/api/v1");
-
         popUpMenu = EmpadasNecesarias.FindObject(GameObject.Find("NewPlayerPopUp").gameObject,"Panel");
 
+        currentUser_json = JsonConvert
+         .DeserializeObject<Dictionary<string, dynamic>>(UserSession);
+        Debug.Log(currentUser_json);
         EmpadasNecesarias.FindObject(GameObject.Find("NewPlayerPopUp").gameObject, "Button")
             .GetComponent<Button>().onClick.AddListener(NameInputButtonEvent);
         
@@ -36,7 +38,7 @@ public class HandlerSessionPlayer
 
 
         if (!string.IsNullOrEmpty(name)) {
-            this.NameUser = name;
+            //this.userSession = name;
 
             string jsonBody ="{\"user\":" +
                 "{\"name\":\"" + name + "\"," +
@@ -48,6 +50,9 @@ public class HandlerSessionPlayer
 
             currentUser_json = JsonConvert
                 .DeserializeObject<Dictionary<string, dynamic>>(httpManager.readResponse());
+            Debug.Log(currentUser_json["id"]);
+            this.UserSession = currentUser_json.ToString();
+            Debug.Log(currentUser_json);
             SceneManager.LoadScene("Games"); 
         }
     }
