@@ -23,8 +23,7 @@ public class HandlerSessionPlayer
         httpManager = new HTTPManager("https://quilla-cuidado-ambiental.herokuapp.com/api/v1");
         popUpMenu = EmpadasNecesarias.FindObject(GameObject.Find("NewPlayerPopUp").gameObject,"Panel");
 
-        currentUser_json = JsonConvert
-         .DeserializeObject<Dictionary<string, dynamic>>(UserSession);
+        //currentUser_json = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(UserSession);
         Debug.Log(currentUser_json);
         EmpadasNecesarias.FindObject(GameObject.Find("NewPlayerPopUp").gameObject, "Button")
             .GetComponent<Button>().onClick.AddListener(NameInputButtonEvent);
