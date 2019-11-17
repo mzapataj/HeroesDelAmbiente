@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class ComandosBasicos : MonoBehaviour
 {
+    HandlerSessionPlayer handlerSessionPlayer = null;
+
+
     public void CargarEscena(string NombreDeEscena)
     {
         
@@ -15,9 +18,14 @@ public class ComandosBasicos : MonoBehaviour
     public void CargarEscenaGames()
     {
 
-        HandlerSessionPlayer handlerSessionPlayer = new HandlerSessionPlayer();
-
-        handlerSessionPlayer.popUpMenu.SetActive(true);
+        if (handlerSessionPlayer == null)
+        {
+            handlerSessionPlayer = new HandlerSessionPlayer();
+            handlerSessionPlayer.popUpMenu.SetActive(true);
+            Debug.Log("Pop up recien abierto");
+        }
+        
+        
         /*
         if (handlerSessionPlayer.NameUser.Equals(""))
         {

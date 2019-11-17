@@ -2,16 +2,27 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using UnityEngine;
 
 public class HTTPManager
 {
+
     WebRequest request;
     WebResponse response;
     string hostname;
 
+
     public HTTPManager(string hostname)
     {
         this.hostname = hostname;
+        
+        //loading = (Object.Instantiate(Resources.Load("Loading"), 
+        //                        Vector3.zero, Quaternion.identity) as GameObject).transform.GetComponent<Loading>();
+        //loading = Object.Instantiate(Resources.Load("Loading"), Vector2.zero, Quaternion.identity) as GameObject;
+        //loading.transform.localScale = new Vector3(2, 2, 2);
+        
+        //loading.SetActive(false);
+
         //request.Credentials = CredentialCache.DefaultCredentials;
 
     }
