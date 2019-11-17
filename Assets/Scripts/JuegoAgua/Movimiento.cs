@@ -30,8 +30,6 @@ public class Movimiento : MonoBehaviour
   * */
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //obtiene el desecho que colisionó con la caneca
-        //desecho = collision.gameObject.GetComponent<ObjectoController>();
         gota = collision.gameObject;
         Destroy(gota);
     }
