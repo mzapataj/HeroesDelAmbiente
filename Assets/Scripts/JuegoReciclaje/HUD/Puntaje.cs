@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Puntaje : MonoBehaviour
 {
-    private int valor = 0;
+    public int valor = 0;
     private Text valor_text;
 
 

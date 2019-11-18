@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class HTTPManager
 {
-
+    UnityWebRequest webRequest;
     WebRequest request;
     WebResponse response;
     string hostname;

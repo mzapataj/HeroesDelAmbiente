@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5330523198369911251}
   - component: {fileID: 1608001414135965612}
   - component: {fileID: 4074640292585707210}
+  - component: {fileID: -3098748815376047631}
   m_Layer: 0
   m_Name: jeringa
   m_TagString: Untagged
@@ -107,3 +108,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 2.49}
   m_EdgeRadius: 0
+--- !u!114 &-3098748815376047631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335804303766441484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a5cfe394aa56d54bbb94d6a0d29000f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: peligroso
+  isBeingHold: 0
+  creation_time: 0
