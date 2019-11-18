@@ -44,3 +44,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: personaje
+    uniqueID: 2094235943
+    locked: 0
