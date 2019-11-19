@@ -10,7 +10,9 @@ public class ComandosBasicos : MonoBehaviour
     public static HandlerSessionPlayer handlerSessionPlayer = null;
 
     public GameObject panel;
+    public GameObject pausaPanel;
     public InputField nameInput;
+    public Button SubmitButton;
     public GameObject waiting;
     public static WebServerManager webServerManager;
 
@@ -30,8 +32,10 @@ public class ComandosBasicos : MonoBehaviour
             handlerSessionPlayer = new HandlerSessionPlayer();
             webServerManager = new WebServerManager(); 
             panel.SetActive(true);
-            /*waiting.SetActive(false);
-            waiting.transform.SetParent(panel.transform, false);
+            
+
+            waiting.SetActive(false);
+            /*waiting.transform.SetParent(panel.transform, false);
             //waiting.transform.parent = popUpMenu.transform;
             waiting.transform.localPosition = Vector2.zero;
             */
@@ -55,8 +59,8 @@ public class ComandosBasicos : MonoBehaviour
         //    .gameObject, "Panel").transform.Find("NameInput").GetComponent<InputField>().text;
         string name = nameInput.text;
         Debug.Log(name);
-        waiting.SetActive(true);
 
+        SetDarkBackground(true);
         if (!string.IsNullOrEmpty(name))
         {
             //this.userSession = name;
@@ -73,7 +77,7 @@ public class ComandosBasicos : MonoBehaviour
                     Debug.Log(handlerSessionPlayer.currentUser_json["id"]);
                     handlerSessionPlayer.UserSession = result;
                     Debug.Log(handlerSessionPlayer.currentUser_json);
-                    waiting.SetActive(false);
+                    SetDarkBackground(false);
                     SceneManager.LoadScene("Games");
                 }
             ));
@@ -82,5 +86,15 @@ public class ComandosBasicos : MonoBehaviour
             
         }
     }
-   
+
+    private void SetDarkBackground(bool active)
+    {
+        nameInput.GetComponent<InputField>().enabled = active;
+        SubmitButton.GetComponent<Button>().interactable = active;
+        waiting.SetActive(active);
+        pausaPanel.SetActive(active);
+        //Time.timeScale = (active)?0:1;
+    }
+
+
 }

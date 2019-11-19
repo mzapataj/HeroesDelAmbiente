@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ScoreFinalReciclaje.unity
     guid: 6af0e971d84f159479be492e3fac3370
+  - enabled: 1
+    path: Assets/Scenes/JuegoLluvia.unity
+    guid: fd9332b9831213542b0b70a0ba3a9506
   m_configObjects: {}

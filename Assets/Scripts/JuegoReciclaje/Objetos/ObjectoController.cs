@@ -42,7 +42,7 @@ public class ObjectoController : MonoBehaviour
     private void OnMouseDown()
     {
      
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !Pause.IsPaused)
         {
 
             Vector3 mousePos = getPosition();
@@ -53,7 +53,6 @@ public class ObjectoController : MonoBehaviour
             isBeingHold = true;
 
         }
-
 
     }
 

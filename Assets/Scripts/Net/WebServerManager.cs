@@ -70,8 +70,8 @@ public class WebServerManager
 
         UnityWebRequest request = new UnityWebRequest(hostname+"/"+path, "POST");
         byte[] bodyRaw = Encoding.UTF8.GetBytes(jsonBody);
-        request.uploadHandler = (UploadHandler)new UploadHandlerRaw(bodyRaw);
-        request.downloadHandler = (DownloadHandler)new DownloadHandlerBuffer();
+        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+        request.downloadHandler = new DownloadHandlerBuffer();
         request.SetRequestHeader("Content-Type", "application/json");
     
         yield return request.SendWebRequest();

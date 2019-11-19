@@ -62,7 +62,8 @@ public class MondyPlazaPaz : Mondy
         }
         else
         {
-            mbContext.StartCoroutine(webServerManager.PostRequest("users/"+(string)ComandosBasicos.handlerSessionPlayer.currentUser_json["id"] + "/scores",
+            string id_current_user = ""+ComandosBasicos.handlerSessionPlayer.currentUser_json["id"];
+            mbContext.StartCoroutine(webServerManager.PostRequest("users/"+id_current_user + "/scores",
                 jsonBody, result =>
                 {
                     pause.ContinueGame();

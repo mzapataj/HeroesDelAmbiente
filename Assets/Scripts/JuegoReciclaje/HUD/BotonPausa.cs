@@ -11,7 +11,7 @@ public class BotonPausa : MonoBehaviour
 
     private void Start()
     {
-        pause = new Pause();
+        //pause = new Pause();
         is_paused = false;
     }
 

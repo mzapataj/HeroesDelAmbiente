@@ -8,8 +8,9 @@ using UnityEngine.UI;
 public class Tiempo : MonoBehaviour
 {
     Text timer_text;
-    private float timer;
+    private float timer, sAux;
     public int  m, s;
+
     /*
     public Tiempo(Text timer_text)
     {
@@ -31,9 +32,9 @@ public class Tiempo : MonoBehaviour
     public void updateTime()
     {
         timer += Time.deltaTime;
-        s = (int)(timer % 61);
-
-        if (s == 60)
+        sAux = (timer % 60);
+        s = ((s % 60 + 1) == (int)(sAux)) ? s+1 : s;
+        if ((int)sAux == 0 && s == 59)
         {
             s = 0;
             m += 1;

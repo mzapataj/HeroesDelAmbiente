@@ -1,47 +1,53 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 //public class Pause : MonoBehaviour
-public class Pause
+public class Pause : MonoBehaviour
 {
+    public GameObject pausePanel;
+
+    public Sprite PauseImg;
+    public Sprite ResumeImg;
+    public static bool IsPaused = false;
+    
     //[SerializeField] private GameObject pausePanel;
     void Start()
     {
-        //pausePanel.SetActive(false);
+        pausePanel.SetActive(false);
     }
 
-    public Pause()
+
+    public void PausaTrigger()
     {
 
-    }
-    /*
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (!IsPaused)
         {
-            if (!pausePanel.activeInHierarchy)
-            {
-                PauseGame();
-            }
-            if (pausePanel.activeInHierarchy)
-            {
-                ContinueGame();
-            }
+            PauseGame();
+            GameObject.Find("Pausa").GetComponent<Image>().sprite = ResumeImg;
         }
+        else
+        {
+            ContinueGame();
+            GameObject.Find("Pausa").GetComponent<Image>().sprite = PauseImg;
+        }
+
     }
-    */
+
     public void PauseGame()
     {
-        Time.timeScale = 0;
-        
-        //pausePanel.SetActive(true);
+        Time.timeScale = 0;   
+        pausePanel.SetActive(true);
         //Disable scripts that still work while timescale is set to 0
+        IsPaused = true;
     }
     public void ContinueGame()
     {
         Time.timeScale = 1;
-        //pausePanel.SetActive(false);
+        pausePanel.SetActive(false);
+        IsPaused = false;
         //enable the scripts again
     }
+
 }
