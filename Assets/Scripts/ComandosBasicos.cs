@@ -31,15 +31,15 @@ public class ComandosBasicos : MonoBehaviour
         {
             handlerSessionPlayer = new HandlerSessionPlayer();
             webServerManager = new WebServerManager(); 
-            panel.SetActive(true);
-            
-
-            waiting.SetActive(false);
             /*waiting.transform.SetParent(panel.transform, false);
             //waiting.transform.parent = popUpMenu.transform;
             waiting.transform.localPosition = Vector2.zero;
             */
         }
+
+        panel.SetActive(true);
+        waiting.SetActive(false);
+
         /*
         if (handlerSessionPlayer.NameUser.Equals(""))
         {
@@ -89,8 +89,8 @@ public class ComandosBasicos : MonoBehaviour
 
     private void SetDarkBackground(bool active)
     {
-        nameInput.GetComponent<InputField>().enabled = active;
-        SubmitButton.GetComponent<Button>().interactable = active;
+        nameInput.GetComponent<InputField>().enabled = !active;
+        SubmitButton.GetComponent<Button>().interactable = !active;
         waiting.SetActive(active);
         pausaPanel.SetActive(active);
         //Time.timeScale = (active)?0:1;

@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JuegoLluvia.unity
     guid: fd9332b9831213542b0b70a0ba3a9506
+  - enabled: 1
+    path: Assets/Scenes/BestScores.unity
+    guid: 220f1bf388087df45b635289bdbafb6e
   m_configObjects: {}
