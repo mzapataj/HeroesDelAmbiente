@@ -5,7 +5,7 @@ using UnityEngine;
 public class Movimiento : MonoBehaviour
 {
     //public Transform player;
-    public float speed = 5.0f;
+    public float speed = 10.0f;
     GameObject gota;
     private bool touchStart = false;
     private Vector2 pointA;
