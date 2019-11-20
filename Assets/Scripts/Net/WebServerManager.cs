@@ -34,13 +34,19 @@ public class WebServerManager
         }));
     }
     */
-    public IEnumerator GetRequest(String path, Action<string> callback)
+    public IEnumerator GetRequest(String path, Action<string> callback
+                                , Action<string> err_callback=null)
     {
         UnityWebRequest request = UnityWebRequest.Get(hostname+"/"+path);
 
         yield return request.SendWebRequest();
 
-        if (request.isNetworkError || request.isHttpError)
+        if (request.isNetworkError)
+        {
+            Debug.LogError(request.error);
+            err_callback?.Invoke(request.error);
+        }
+        else if (request.isHttpError)
         {
             Debug.LogError(request.error);
         }
@@ -65,7 +71,8 @@ public class WebServerManager
          
     }*/
 
-    public IEnumerator PostRequest(string path, string jsonBody, Action<string> callback)
+    public IEnumerator PostRequest(string path, string jsonBody, Action<string> callback
+                                    , Action<string> err_callback = null)
     {
 
         UnityWebRequest request = new UnityWebRequest(hostname+"/"+path, "POST");
@@ -79,6 +86,7 @@ public class WebServerManager
         if (request.isNetworkError || request.isHttpError)
         {
             Debug.LogError(request.error);
+            err_callback?.Invoke(request.error);
         }
 
         else

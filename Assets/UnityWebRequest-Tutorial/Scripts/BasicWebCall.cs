@@ -36,18 +36,26 @@ public class BasicWebCall : MonoBehaviour
         {
             Debug.Log(result);
             waiting.SetActive(false);
+        }, error => {
+            Debug.Log("No hay conexión a internet.");
+            waiting.SetActive(false);
         }));
         //StartCoroutine(SimpleGetRequest());
         //Debug.Log("Respuesta recibida.");
     }
 
-    IEnumerator GetRequest(Action<string> callback)
+    IEnumerator GetRequest(Action<string> callback, Action<string> errCallback)
     {
         UnityWebRequest request = UnityWebRequest.Get(hostname+"/"+"users");
 
         yield return request.SendWebRequest();
 
-        if (request.isNetworkError || request.isHttpError)
+        if (request.isNetworkError)
+        {
+            //Debug.LogError(request.error);
+            errCallback?.Invoke(request.error);
+        }
+        else if (request.isHttpError)
         {
             Debug.LogError(request.error);
         }

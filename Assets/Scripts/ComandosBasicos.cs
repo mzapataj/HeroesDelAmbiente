@@ -37,33 +37,29 @@ public class ComandosBasicos : MonoBehaviour
             */
         }
 
-        panel.SetActive(true);
-        waiting.SetActive(false);
-
-        /*
-        if (handlerSessionPlayer.NameUser.Equals(""))
+        
+        
+        if (handlerSessionPlayer.currentUser_json == null)
         {
-            handlerSessionPlayer.popUpMenu.SetActive(true);
+            panel.SetActive(true);
+            waiting.SetActive(false);
         }
         else
         {
             SceneManager.LoadSceneAsync("Games");
         }
-        */
+        
     }
 
     public void CreateNewGuestUser()
     {
         
-        //string name = EmpadasNecesarias.FindObject(GameObject.Find("NewPlayerPopUp")
-        //    .gameObject, "Panel").transform.Find("NameInput").GetComponent<InputField>().text;
         string name = nameInput.text;
         Debug.Log(name);
 
         SetDarkBackground(true);
         if (!string.IsNullOrEmpty(name))
         {
-            //this.userSession = name;
 
             string jsonBody = "{\"user\":" +
                 "{\"name\":\"" + name + "\"," +
@@ -71,12 +67,10 @@ public class ComandosBasicos : MonoBehaviour
 
 
            StartCoroutine(webServerManager.PostRequest("users",jsonBody,
-                result =>{
+                result => {
                     handlerSessionPlayer.currentUser_json = JsonConvert
                     .DeserializeObject<Dictionary<string, dynamic>>(result);
-                    Debug.Log(handlerSessionPlayer.currentUser_json["id"]);
                     handlerSessionPlayer.UserSession = result;
-                    Debug.Log(handlerSessionPlayer.currentUser_json);
                     SetDarkBackground(false);
                     SceneManager.LoadScene("Games");
                 }

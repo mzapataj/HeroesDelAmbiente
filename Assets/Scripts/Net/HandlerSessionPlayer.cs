@@ -19,6 +19,11 @@ public class HandlerSessionPlayer
 
     public HandlerSessionPlayer()
     {
+        if (!UserSession.Equals(""))
+        {
+            currentUser_json = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(UserSession);
+            Debug.Log(UserSession);
+        }
 
         //currentUser_json = JsonConvert.DeserializeObject<Dictionary<string, dynamic>>(UserSession);
         Debug.Log(currentUser_json);

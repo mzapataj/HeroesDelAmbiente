@@ -26,7 +26,7 @@ public class MondyPlazaPaz : Mondy
     public override void perderVida()
     {
             vida -= 1;
-            vida_text.text = "Vida x " + vida;
+            vida_text.text = "x " + vida;
 
             if (vida <= 0)
             {
@@ -37,7 +37,7 @@ public class MondyPlazaPaz : Mondy
 
     public override void morir()
     {
-        Pause pause = new Pause();
+        Pause pause = GameObject.Find("Canvas").GetComponent<Pause>();
         Debug.Log("Juego terminado");
         WebServerManager webServerManager = new WebServerManager();
 
@@ -47,7 +47,7 @@ public class MondyPlazaPaz : Mondy
         string jsonBody = JsonConvert.SerializeObject(jsonBody_dictionary);
         Debug.Log("Json body: " +jsonBody);
         pause.PauseGame();
-
+        pause.waiting.SetActive(true);
         if (ComandosBasicos.handlerSessionPlayer == null)
         {
             mbContext.StartCoroutine(webServerManager.PostRequest("users/39/scores",
@@ -55,6 +55,7 @@ public class MondyPlazaPaz : Mondy
             jsonBody, result =>
             {
                 pause.ContinueGame();
+                pause.waiting.SetActive(false);
                 SceneManager.LoadScene("ScoreFinalReciclaje");
 
             }));
@@ -67,6 +68,7 @@ public class MondyPlazaPaz : Mondy
                 jsonBody, result =>
                 {
                     pause.ContinueGame();
+                    pause.waiting.SetActive(false);
                     SceneManager.LoadScene("ScoreFinalReciclaje");
 
                 }));

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Pause : MonoBehaviour
 {
     public GameObject pausePanel;
-
+    public GameObject waiting = null;
     public Sprite PauseImg;
     public Sprite ResumeImg;
     public static bool IsPaused = false;
