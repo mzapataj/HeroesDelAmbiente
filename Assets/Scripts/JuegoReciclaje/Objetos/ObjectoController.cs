@@ -33,7 +33,7 @@ public class ObjectoController : MonoBehaviour
 
         if (isBeingHold == true)
         {
-            Vector3 mousePos = getPosition();
+            Vector3 mousePos = getPositionTouch();
             this.gameObject.transform.localPosition = new Vector3(mousePos.x - startPosX, mousePos.y - startPosY, 0);
         }
 
@@ -45,7 +45,7 @@ public class ObjectoController : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && !Pause.IsPaused)
         {
 
-            Vector3 mousePos = getPosition();
+            Vector3 mousePos = getPositionTouch();
 
             startPosX = mousePos.x - this.transform.localPosition.x;
             startPosY = mousePos.y - this.transform.localPosition.y;
@@ -62,7 +62,7 @@ public class ObjectoController : MonoBehaviour
 
     }
 
-    private Vector3 getPosition()
+    private Vector3 getPositionTouch()
     {
         Vector3 mousePos;
         mousePos = Input.mousePosition;

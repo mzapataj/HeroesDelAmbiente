@@ -6,6 +6,7 @@ public class Lluvia : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject[] Gota;
+    public static MondyVentanaMundo mondy;
     public float respawnTime = 1.0f;
     int i;
     private Vector2 screenbounds;
@@ -13,6 +14,7 @@ public class Lluvia : MonoBehaviour
     void Start()
     {
         screenbounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
+        //mondy = new MondyVentanaMundo();
         StartCoroutine(goteo());
     }
     private void spawnGota()
