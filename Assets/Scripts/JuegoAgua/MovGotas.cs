@@ -7,12 +7,21 @@ public class MovGotas : MonoBehaviour
     // Start is called before the first frame update
     public float speed = 1.0f;
     private Rigidbody2D rb;
+    
     private Vector2 screenBounds;
 
+    public Rigidbody2D GetRigidbody()
+    {
+        return rb;
+    }
+
+    private void Awake()
+    {
+        rb = this.GetComponent<Rigidbody2D>();
+    }
 
     void Start()
     {
-        rb = this.GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(0, -speed);
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
     }

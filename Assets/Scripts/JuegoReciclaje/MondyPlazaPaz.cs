@@ -9,10 +9,11 @@ public class MondyPlazaPaz : Mondy
 {
 
     public Dictionary<string, int> Desechos_depositados;
-    
-    
-    public MondyPlazaPaz(int vida, Text vida_text, Puntaje puntaje_text, MonoBehaviour mbContext) 
-                        : base(vida, vida_text, puntaje_text, mbContext)
+   
+
+
+    public MondyPlazaPaz(int vida, Puntaje puntaje_text, Text vida_text, MonoBehaviour mbContext) 
+                        : base(vida, puntaje_text, vida_text, mbContext)
     {
         Desechos_depositados = new Dictionary<string, int>();
         Desechos_depositados.Add("ordinario", 0);
@@ -23,24 +24,24 @@ public class MondyPlazaPaz : Mondy
         Desechos_depositados.Add("pila", 0);
     }
 
-    public override void perderVida()
+    public override void PerderVida()
     {
             vida -= 1;
             vida_text.text = "x " + vida;
 
             if (vida <= 0)
             {
-                morir();    
+                Morir();    
             }
 
     }
 
-    public override void morir()
+    public override void Morir()
     {
+
         Pause pause = GameObject.Find("Canvas").GetComponent<Pause>();
         Debug.Log("Juego terminado");
         WebServerManager webServerManager = new WebServerManager();
-
         Dictionary<string, dynamic> jsonBody_dictionary = new Dictionary<string, dynamic>();
         Desechos_depositados.Add("value", puntaje_text.valor);
         jsonBody_dictionary.Add("score",Desechos_depositados);
@@ -48,16 +49,19 @@ public class MondyPlazaPaz : Mondy
         Debug.Log("Json body: " +jsonBody);
         pause.PauseGame();
         pause.waiting.SetActive(true);
+
         if (ComandosBasicos.handlerSessionPlayer == null)
         {
             mbContext.StartCoroutine(webServerManager.PostRequest("users/39/scores",
             //mbContext.StartCoroutine(webServerManager.PostRequest("users/"+(string)ComandosBasicos.handlerSessionPlayer.currentUser_json["id"] + "/scores",
             jsonBody, result =>
             {
+                //pause.waiting.SetActive(false);
                 pause.ContinueGame();
-                pause.waiting.SetActive(false);
                 SceneManager.LoadScene("ScoreFinalReciclaje");
 
+            }, error => {
+                SceneManager.LoadScene("Menú");
             }));
 
         }
@@ -67,17 +71,19 @@ public class MondyPlazaPaz : Mondy
             mbContext.StartCoroutine(webServerManager.PostRequest("users/"+id_current_user + "/scores",
                 jsonBody, result =>
                 {
+                    //pause.waiting.SetActive(false);
                     pause.ContinueGame();
-                    pause.waiting.SetActive(false);
                     SceneManager.LoadScene("ScoreFinalReciclaje");
 
+                }, error => {
+                    SceneManager.LoadScene("Menú");
                 }));
             //HandlerSessionPlayer.httpManager.postMethod(,
             //    "users/"+HandlerSessionPlayer.currentUser_json["id"]+"/scores");
         }
     }
 
-    public void addBasura(string type)
+    public void AddBasura(string type)
     {
         try
         {
@@ -91,9 +97,22 @@ public class MondyPlazaPaz : Mondy
     }
  
 
-    public override void setScore()
+    public override void SetScore(long delta_lifetime)
     {
-        throw new System.NotImplementedException();  
         
+        if (3 > delta_lifetime)
+        {
+            puntaje += 5;
+        }
+        else if (7 > delta_lifetime)
+        {
+            puntaje += 3;
+        }
+        else
+        {
+            puntaje += 1;
+        }
+
+        puntaje_text.valor = puntaje;
     }
 }

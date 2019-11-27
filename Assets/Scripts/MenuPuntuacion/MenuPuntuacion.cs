@@ -62,14 +62,18 @@ public class MenuPuntuacion : MonoBehaviour
                 //Debug.Log(result);
                 SceneManager.LoadScene("BestScores");
                 
-            }));
+            },
+            error => {
+                SceneManager.LoadScene("Menú");
+            }
+            ));
     }
 
     private void SetDarkBackground(bool active)
     {
         AguaButton.GetComponent<Button>().interactable = !active;
         ReciclajeButton.GetComponent<Button>().interactable = !active;
-        waiting.SetActive(active);
+        waiting.SetActive(true);
         pausaPanel.SetActive(active);
     }
 

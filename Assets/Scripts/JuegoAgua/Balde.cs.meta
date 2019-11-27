@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 658acf17aca39044099492a8d44e0572
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Vacio: {fileID: 21300000, guid: 240702e01232bdf41a776e0b647dcfe2, type: 3}
+  - LLeno: {fileID: 21300000, guid: f965cb0342b978a498dea18bb601ff1c, type: 3}
+  - DerramandoAgua: {fileID: 21300000, guid: e498bd3e438f7e9479e24cfba85edc94, type: 3}
+  - DerramandoAcido: {fileID: 21300000, guid: 66b79059e978020429d659cfd2536ba5, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

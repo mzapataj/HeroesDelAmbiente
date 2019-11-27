@@ -73,11 +73,12 @@ public class ComandosBasicos : MonoBehaviour
                     handlerSessionPlayer.UserSession = result;
                     SetDarkBackground(false);
                     SceneManager.LoadScene("Games");
+                },
+                error =>
+                {
+                    SceneManager.LoadScene("Games");
                 }
             ));
-
-
-            
         }
     }
 
@@ -85,9 +86,9 @@ public class ComandosBasicos : MonoBehaviour
     {
         nameInput.GetComponent<InputField>().enabled = !active;
         SubmitButton.GetComponent<Button>().interactable = !active;
-        waiting.SetActive(active);
+        waiting.SetActive(true);
         pausaPanel.SetActive(active);
-        //Time.timeScale = (active)?0:1;
+       
     }
 
 

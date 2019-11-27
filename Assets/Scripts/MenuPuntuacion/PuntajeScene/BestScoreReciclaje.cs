@@ -21,13 +21,14 @@ public class BestScoreReciclaje : MonoBehaviour
             
             
             row.transform.GetChild(0).GetComponent<Text>().text = ""+userBestScore["user_id"];
-            row.transform.GetChild(1).GetComponent<Text>().text = ""+userBestScore["ordinario"];
-            row.transform.GetChild(2).GetComponent<Text>().text = ""+userBestScore["peligroso"];
-            row.transform.GetChild(3).GetComponent<Text>().text = ""+userBestScore["papel"];
-            row.transform.GetChild(4).GetComponent<Text>().text = ""+userBestScore["plastico"];
-            row.transform.GetChild(5).GetComponent<Text>().text = ""+userBestScore["bombillo"];
-            row.transform.GetChild(6).GetComponent<Text>().text = ""+userBestScore["pila"];
-            row.transform.GetChild(7).GetComponent<Text>().text = ""+userBestScore["value"];
+            row.transform.GetChild(1).GetComponent<Text>().text = ""+userBestScore["name"];
+            row.transform.GetChild(2).GetComponent<Text>().text = ""+userBestScore["ordinario"];
+            row.transform.GetChild(3).GetComponent<Text>().text = ""+userBestScore["peligroso"];
+            row.transform.GetChild(4).GetComponent<Text>().text = ""+userBestScore["papel"];
+            row.transform.GetChild(5).GetComponent<Text>().text = ""+userBestScore["plastico"];
+            row.transform.GetChild(6).GetComponent<Text>().text = ""+userBestScore["bombillo"];
+            row.transform.GetChild(7).GetComponent<Text>().text = ""+userBestScore["pila"];
+            row.transform.GetChild(8).GetComponent<Text>().text = ""+userBestScore["value"];
             
         }
     }
