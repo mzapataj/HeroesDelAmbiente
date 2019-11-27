@@ -40,6 +40,8 @@ public class Planta : MonoBehaviour
     {
         GotasRecibidas += gotas;
         CancelInvoke("Secarse");
+        CancelInvoke("Morir");
+
         GameObject.Find("planta").GetComponent<SpriteRenderer>().sprite = StatesPlantImg[CurrentState];
         if (GotasRecibidas >= GotasParaCrecer) {
             Crecer();
@@ -64,6 +66,12 @@ public class Planta : MonoBehaviour
     private void Secarse()
     {
         GameObject.Find("planta").GetComponent<SpriteRenderer>().sprite = StatesPlantDyingImg[CurrentState];
+        Invoke("Morir",10f);
+    }
+
+    private void Morir()
+    {
+        Lluvia.mondy.Morir();
     }
 
 }

@@ -24,9 +24,18 @@ EditorBuildSettings:
     path: Assets/Scenes/JuegoLluvia.unity
     guid: fd9332b9831213542b0b70a0ba3a9506
   - enabled: 1
-    path: Assets/Scenes/BestScores.unity
+    path: Assets/Scenes/BestScoresReciclaje.unity
     guid: 220f1bf388087df45b635289bdbafb6e
   - enabled: 1
     path: Assets/Scenes/ScoreFinalAgua.unity
     guid: 209fa2677e3cb7047ad243f4bb515980
+  - enabled: 1
+    path: Assets/Scenes/BestScoresAgua.unity
+    guid: e738f546adf4afc48bfe80cf2ccbdaeb
+  - enabled: 1
+    path: Assets/Scenes/InfoReciclaje.unity
+    guid: 49a827cb464cb7e45bd68d369c72f67e
+  - enabled: 1
+    path: Assets/Scenes/InfoAgua.unity
+    guid: 8f95d3d2d1c9a6342b36675fe656cc4a
   m_configObjects: {}

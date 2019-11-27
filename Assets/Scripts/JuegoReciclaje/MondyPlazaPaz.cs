@@ -76,7 +76,7 @@ public class MondyPlazaPaz : Mondy
                     SceneManager.LoadScene("ScoreFinalReciclaje");
 
                 }, error => {
-                    SceneManager.LoadScene("Menú");
+                    SceneManager.LoadScene("ScoreFinalReciclaje");
                 }));
             //HandlerSessionPlayer.httpManager.postMethod(,
             //    "users/"+HandlerSessionPlayer.currentUser_json["id"]+"/scores");

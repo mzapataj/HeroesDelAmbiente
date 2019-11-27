@@ -53,14 +53,15 @@ public class MenuPuntuacion : MonoBehaviour
 
                 usersBestScore = JsonConvert
                                  .DeserializeObject<List<Dictionary<string, dynamic>>>(result);
-                /*
-                foreach (Dictionary<string,dynamic> userBestScore in usersBestScore)
+                if (juego.Equals("1"))
                 {
-                    Debug.Log(userBestScore["user_id"]);
-                }*/
+                    SceneManager.LoadScene("BestScoresReciclaje");
+                }
+                else
+                {
+                    SceneManager.LoadScene("BestScoresAgua");
+                }   
                 
-                //Debug.Log(result);
-                SceneManager.LoadScene("BestScores");
                 
             },
             error => {
@@ -77,6 +78,13 @@ public class MenuPuntuacion : MonoBehaviour
         pausaPanel.SetActive(active);
     }
 
+    public void CloseScorePanel()
+    {
+        if (RootPanel.active == true)
+        {
+            RootPanel.SetActive(false);
+        }
+    }
 
 
 }

@@ -37,8 +37,10 @@ public class ComandosBasicos : MonoBehaviour
             */
         }
 
-        
-        
+
+        panel.SetActive(true);
+        waiting.SetActive(false);
+/*
         if (handlerSessionPlayer.currentUser_json == null)
         {
             panel.SetActive(true);
@@ -48,7 +50,7 @@ public class ComandosBasicos : MonoBehaviour
         {
             SceneManager.LoadSceneAsync("Games");
         }
-        
+*/         
     }
 
     public void CreateNewGuestUser()
@@ -89,6 +91,14 @@ public class ComandosBasicos : MonoBehaviour
         waiting.SetActive(true);
         pausaPanel.SetActive(active);
        
+    }
+
+    public void CloseNamePanel()
+    {
+        if (panel.activeSelf == true)
+        {
+            panel.SetActive(false);
+        }
     }
 
 

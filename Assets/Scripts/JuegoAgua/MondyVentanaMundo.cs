@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MondyVentanaMundo : Mondy
@@ -57,22 +58,28 @@ public class MondyVentanaMundo : Mondy
 
     public override void Morir()
     {
+        Pause pause = GameObject.Find("Canvas").GetComponent<Pause>();
+        pause.PauseGame();
+        pause.waiting.SetActive(true);
+
         WebServerManager webServerManager = new WebServerManager();
         Dictionary<string, dynamic> jsonBody_dictionary = new Dictionary<string, dynamic>();
         Dictionary<string, dynamic> jsonBodyRoot_dictionary = new Dictionary<string, dynamic>();
 
-        jsonBody_dictionary.Add("value",puntaje);
-        jsonBody_dictionary.Add("gotas", balde.GotasNormalesRecogidas );
-        jsonBodyRoot_dictionary.Add("water_score",jsonBody_dictionary);
+        jsonBody_dictionary.Add("value", puntaje);
+        jsonBody_dictionary.Add("gotas", balde.GotasNormalesRecogidas);
+        jsonBodyRoot_dictionary.Add("water_score", jsonBody_dictionary);
 
         string jsonBody = JsonConvert.SerializeObject(jsonBodyRoot_dictionary);
-
-        mbContext.StartCoroutine(webServerManager.PostRequest("users/2/water_score",jsonBody, 
+        string id_current_user = "" + ComandosBasicos.handlerSessionPlayer.currentUser_json["id"];
+        mbContext.StartCoroutine(webServerManager.PostRequest("users/" + id_current_user+"/water_score",jsonBody, 
             result => {
-                Debug.Log("Puntuación enviada.");
+                SceneManager.LoadSceneAsync("ScoreFinalAgua");
+            },
+            error => {
+                SceneManager.LoadScene("ScoreFinalAgua");
             }));
-
-        throw new System.NotImplementedException();
+        
     }
 
     public override void PerderVida()

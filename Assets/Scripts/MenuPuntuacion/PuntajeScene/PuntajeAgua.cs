@@ -10,7 +10,7 @@ public class PuntajeAgua : MonoBehaviour
     void Start()
     {
         GameObject.Find("Puntaje").GetComponent<Text>().text = Lluvia.mondy.puntaje.ToString();
-        GameObject.Find("Gotas").GetComponent<Text>().text = Lluvia.mondy.balde.GotasNormalesRecogidas.ToString();
+        GameObject.Find("Gotas").GetComponent<Text>().text = "x "+Lluvia.mondy.balde.GotasNormalesRecogidas.ToString();
         GameObject.Find("btnRegresar").GetComponent<Button>().onClick.AddListener(ReturnToHome);
     }
 
